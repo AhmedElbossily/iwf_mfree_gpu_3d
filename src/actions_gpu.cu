@@ -691,7 +691,7 @@ void actions_setup_thermal_constants_wp(trml_constants thermal_h) {
 
 	if (thermal_h.alpha != 0.) {
 		m_thermal = true;
-#if !(defined(Thermal_Conduction_Brookshaw) ||defined(Thermal_Conduction_Brookshaw))
+#if !(defined(Thermal_Conduction_Brookshaw) ||defined(Thermal_Conduction_PSE))
 		printf("warning! heat conduction constants set but no heat conduction algorithm active!");
 #endif
 	}
@@ -703,7 +703,7 @@ void actions_setup_thermal_constants_tool(trml_constants thermal_h) {
 	if (thermal_h.alpha != 0.) {
 		m_thermal = true;
 
-#if !(defined(Thermal_Conduction_Brookshaw) ||defined(Thermal_Conduction_Brookshaw))
+#if !(defined(Thermal_Conduction_Brookshaw) ||defined(Thermal_Conduction_PSE))
 		printf("warning! heat conduction constants set but no heat conduction algorithm active!");
 #endif
 	}
